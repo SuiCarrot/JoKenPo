@@ -50,22 +50,12 @@ while (true) {
         `\nVocê escolheu: ${selecaoPlayer}\nEu escolhi: ${selecaoComp}\nNesta rodada vocês empataram.`
       );
       empates++;
-    } else if (escolhaPlayer == 0 && escolhaPc == 2) {
+    } else if (escolhaPlayer == 0 && escolhaPc == 2 || escolhaPlayer > escolhaPc) {
       console.log(
         `\nVocê escolheu: ${selecaoPlayer}\nEu escolhi: ${selecaoComp}\nNesta rodada você ganhou.`
       );
       vitorias++;
-    } else if (escolhaPc == 0 && escolhaPlayer == 2) {
-      console.log(
-        `\nVocê escolheu: ${selecaoPlayer}\nEu escolhi: ${selecaoComp}\nNesta rodada você perdeu.`
-      );
-      derrotas++;
-    } else if (escolhaPlayer > escolhaPc) {
-      console.log(
-        `\nVocê escolheu: ${selecaoPlayer}\nEu escolhi: ${selecaoComp}\nNesta rodada você ganhou.`
-      );
-      vitorias++;
-    } else if (escolhaPlayer < escolhaPc) {
+    } else if (escolhaPc == 0 && escolhaPlayer == 2 || escolhaPlayer < escolhaPc) {
       console.log(
         `\nVocê escolheu: ${selecaoPlayer}\nEu escolhi: ${selecaoComp}\nNesta rodada você perdeu.`
       );
