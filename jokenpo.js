@@ -3,6 +3,7 @@ const prompt = require("prompt-sync")();
 //Array para seleção
 
 const selecao = ["PEDRA", "PAPEL", "TESOURA"];
+console.log(`Seja bem vindo ao nosso jogo de pedra, papel e tesoura. Hoje eu serei o seu inimigo.`)
 
 // Início do jogo, e retorno caso o jogador decida jogar de novo
 
@@ -47,7 +48,7 @@ while (true) {
     // Se forem iguais, empate. O numero de indice maior ganha. Com exceção da primeira posição, que ganha da ultima
     if (escolhaPc === escolhaPlayer) {
       console.log(
-        `\nVocê escolheu: ${selecaoPlayer}\nEu escolhi: ${selecaoComp}\nNesta rodada vocês empataram.`
+        `\nVocê escolheu: ${selecaoPlayer}\nEu escolhi: ${selecaoComp}\nNesta rodada nós empatamos.`
       );
       empates++;
     } else if (escolhaPlayer == 0 && escolhaPc == 2 || escolhaPlayer > escolhaPc) {
